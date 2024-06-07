@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrfEWhkr05bijijcTH1xgxXNTUuGu7-PKTJA&usqp=CAU"
+    />
+    <title><%= title%></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <%- style %>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+      <div class="container collapse navbar-collapse x">
+        <a class="navbar-brand" href="/">
+          <strong>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/9768/9768450.png"
+              class="w-25"
+            />
+            Habit Tracker
+          </strong>
+        </a>
+        <ul class="navbar-nav font-weight-bolder">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/details">Details</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container search d-flex justify-content-end">
+        <form class="form-inline my-lg-0 my-sm-0">
+          <input
+            class="form-control mr-sm-1"
+            type="search"
+            placeholder="Search Habit"
+            aria-label="Search"
+            id="searchbar"
+            onkeyup="search_habit()"
+          />
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="button">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+    <br />
+    <div class="container"><%-body %></div>
+
+    <%- script %>
+    <script type="text/javascript" src="/js/layout.js"></script>
+  </body>
+</html>
